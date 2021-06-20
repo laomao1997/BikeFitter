@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">BikeFitter</string>
+    <string name="double_line">--</string>
+    <string name="unit_cm">cm</string>
+    <string name="what_is_reach_and_stack">what is reach and stack</string>
+    <string name="egg_height">跨高</string>
+    <string name="please_input_your_egg_height">请输入您的跨高</string>
+    <string name="calculate">计算</string>
+    <string name="riding_style">骑行风格</string>
+    <string name="relax">休闲</string>
+    <string name="normal">普通</string>
+    <string name="race">竞技</string>
+    <string name="seat_height">坐垫高度</string>
+    <string name="stack">STACK 值</string>
+    <string name="reach">REACH 值</string>
+</resources>

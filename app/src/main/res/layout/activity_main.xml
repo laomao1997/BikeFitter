@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:padding="15dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_egg_height_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/egg_height"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+
+        app:layout_constraintBottom_toBottomOf="@id/et_egg_height"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/et_egg_height" />
+
+    <EditText
+        android:id="@+id/et_egg_height"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:background="@color/white"
+        android:gravity="end"
+        android:hint="@string/please_input_your_egg_height"
+        android:inputType="number"
+        android:maxLength="4"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toRightOf="@id/tv_egg_height_label"
+        app:layout_constraintRight_toLeftOf="@id/et_egg_height_unit"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="5dp"
+        android:autofillHints="0" />
+
+    <TextView
+        android:id="@+id/et_egg_height_unit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/unit_cm"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@id/et_egg_height"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_calculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/calculate"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_egg_height_label" />
+
+    <TextView
+        android:id="@+id/tv_riding_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/riding_style"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@id/radio_group"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/radio_group" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toRightOf="@id/tv_riding_style"
+        app:layout_constraintTop_toBottomOf="@id/btn_calculate"
+        android:layout_marginStart="10dp">
+
+        <RadioButton
+            android:id="@+id/type_relax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/relax"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/type_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="@string/normal"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/type_race"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="@string/race"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_seat_height_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/seat_height"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radio_group" />
+
+    <TextView
+        android:id="@+id/tv_seat_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:text="@string/double_line"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintRight_toLeftOf="@id/tv_seat_height_unit"
+        app:layout_constraintTop_toBottomOf="@id/radio_group"
+        android:layout_marginEnd="5dp" />
+
+    <TextView
+        android:id="@+id/tv_seat_height_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/unit_cm"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radio_group" />
+
+    <TextView
+        android:id="@+id/tv_stack_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/stack"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_seat_height_label" />
+
+    <TextView
+        android:id="@+id/tv_stack_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:text="@string/double_line"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintRight_toLeftOf="@id/tv_stack_unit"
+        app:layout_constraintTop_toBottomOf="@id/tv_seat_height_label"
+        android:layout_marginEnd="5dp" />
+
+    <TextView
+        android:id="@+id/tv_stack_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/unit_cm"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_seat_height_label" />
+
+    <TextView
+        android:id="@+id/tv_reach_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/reach"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_stack_label" />
+
+    <TextView
+        android:id="@+id/tv_reach_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:text="@string/double_line"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintRight_toLeftOf="@id/tv_stack_unit"
+        app:layout_constraintTop_toBottomOf="@id/tv_stack_label" />
+
+    <TextView
+        android:id="@+id/tv_reach_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/unit_cm"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_stack_label" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitCenter"
+        android:contentDescription="@string/what_is_reach_and_stack"
+        android:src="@drawable/img_stack_and_reach"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_reach_height" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

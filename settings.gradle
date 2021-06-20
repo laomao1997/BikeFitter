@@ -1,0 +1,2 @@
+rootProject.name = "BikeFitter"
+include ':app'
